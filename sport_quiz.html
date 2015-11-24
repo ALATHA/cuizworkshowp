@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title></title>
+<script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript">
+
+ $(function(){
+    $("#my_quizzform").on("submit",function(evt){
+      evt.preventDefault();
+      var answers =$(this).serializeArray();
+      var answersString =JSON.stringify(answers);
+      alert(answersString);
+    });
+  });
+alert($(this).serializeArray()[0].name);
+//how to check the answer
+//create a space on the right to display the score..
+ 
+</script>
+</head>
+<body>
+<div class="container">
+<form id="my_quizzform">
+  <h1>MY SPORT QUIZZZZ</h1>
+    
+    <h2>What is the most popular sport in S.A?</h2>
+    <input type="radio" name="question1" id="question1" value="option1">Under water hockey
+    <br/>
+    <input type="radio" name="question1" id="question1" value="option2">Rugby
+<br/>
+    <input type="radio" name="question11" id="question1" value="option3">Soccer
+  
+  <h2>For which sport do you need a racket?</h2>
+    <input type="radio" name="question2" id="question2" value="option1">Hockey<br/>
+    <input type="radio" name="question2" id="question2" value="option2">Soccer
+    <br />
+    <input type="radio" name="question2" id="question2" value="option3">Table tennis
+
+    <div class="radio">
+      <h2>Which sport uses the word "LOVE"?</h2>
+    </div>
+    <input type="radio" name="question3" id="question3" value="option1">Tennis<br/>
+    <input type="radio" name="question3" id="question3" value="option2">Rugby
+    <br />
+    <input type="radio" name="question3" id="question3" value="option3">Volley-Ball
+
+<br/>
+  <button id="submit" class="btn  btn-lg btn-primary" type ="submit">SUBMIT</button>
+</div>
+</form>
+</body>
+
+
+</html>
